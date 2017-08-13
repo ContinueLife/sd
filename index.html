@@ -6,9 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>不忘初心-入党的那一天</title>
 
-
-
-
+<script type="text/javascript">
+function audioAutoPlay(id){
+    var audio = document.getElementById(id);
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+    }, false);
+}
+audioAutoPlay('musicid');
+</script>
 
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
@@ -54,17 +61,7 @@
 </div>
 
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
-<script type="text/javascript">
-var media = document.getElementById("audio");
-wx.config({
-    // 配置信息
-});
-wx.ready(function () {
-    media.play();
-});
-</script>
 
 <script language="javascript">
 function form1ChK()//函数不要和表单同名
